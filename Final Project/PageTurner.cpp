@@ -873,7 +873,7 @@ Function will move pointer or inform user that they are at the bottom of the tre
 */
 void Pages::goLeft(){
     //make sure that not at bottom of the tree before going there
-    if(currentbuild->left != NULL)
+    if(currentbuild != NULL || currentbuild->left != NULL)
         currentbuild = currentbuild->left;
     else
         cout << "There are no more options on the left side." << endl;
@@ -898,7 +898,7 @@ Function will move pointer or inform user that they are at the bottom of the tre
 */
 void Pages::goRight(){
     //make sure that not at bottom of the tree before going there
-    if(currentbuild->right != NULL)
+    if(currentbuild != NULL || currentbuild->right != NULL)
         currentbuild = currentbuild->right;
     else
         cout << "There are no more options on the right side." << endl;
